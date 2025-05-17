@@ -23,6 +23,7 @@ This base dashboard is built on top of FilamentPHP, offering a comprehensive set
   - User profile customization
   - Avatar management
   - Personal information settings
+  - Browser Sessions Managment
 
 - 📁 **Spatie Media Library Integration**
   - Advanced media management
