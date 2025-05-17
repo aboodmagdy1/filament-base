@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Providers\Filament;
-
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationGroup;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -57,15 +58,15 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 BreezyCore::make()->myProfile(
-                    shouldRegisterNavigation: true,
-                    slug: 'my-profile',
-                    hasAvatars: true,
-
-                    
-
-                )->enableBrowserSessions(true)
+                   slug: 'my-profile',hasAvatars: true,)->enableBrowserSessions(true),
+                FilamentShieldPlugin::make(),
             ])
-            
+            ->navigationGroups([
+                NavigationGroup::make()
+                    ->label('Users')
+                    ->collapsed()
+            ])
             ;
     }
 }
+

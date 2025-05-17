@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
+use BezhanSalleh\FilamentShield\FilamentShield;
+use BezhanSalleh\FilamentShield\Commands;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +26,11 @@ class AppServiceProvider extends ServiceProvider
             $switch
                 ->locales(['ar','en']); // also accepts a closure
         });
+
+        Commands\SetupCommand::prohibit($this->app->isProduction());
+        Commands\InstallCommand::prohibit($this->app->isProduction());
+        Commands\GenerateCommand::prohibit($this->app->isProduction());
+        Commands\PublishCommand::prohibit($this->app->isProduction());
+        FilamentShield::prohibitDestructiveCommands($this->app->isProduction());
     }
 }
