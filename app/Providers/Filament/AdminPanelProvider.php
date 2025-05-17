@@ -17,7 +17,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-
+use Jeffgreco13\FilamentBreezy\BreezyCore;
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -26,6 +26,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->emailVerification()
             ->login()
             ->colors([
                 'primary' => Color::Amber,
@@ -53,6 +54,18 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->plugins([
+                BreezyCore::make()->myProfile(
+                    shouldRegisterNavigation: true,
+                    slug: 'my-profile',
+                    hasAvatars: true,
+
+                    
+
+                )->enableBrowserSessions(true)
+            ])
+            
+            ;
     }
 }
