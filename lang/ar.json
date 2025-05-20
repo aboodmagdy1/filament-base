@@ -5,11 +5,23 @@
     "Avatar": "الصورة الشخصية",
     "Password": "كلمة المرور",
     "Create User": "إنشاء مستخدم",
+    "Add User": "إضافة مستخدم",
     "Edit User": "تعديل المستخدم",
     "Delete User": "حذف المستخدم",
     "View User": "عرض المستخدم",
     "Users": "المستخدمين",
     "User": "المستخدم",
-    "Users List": "قائمة المستخدمين"
+    "Users List": "قائمة المستخدمين",
+    "Settings": "الإعدادات",
+    "General Settings": "الإعدادات العامة",
+    "Social Media Settings": "الإعدادات الاجتماعية",
+    "Manage General": "إدارة  العامة",
+    "Manage Social Media": "إدارة  مواقع التواصل ",
+    "Facebook": "فيسبوك",
+    "Twitter": "تويتر",
+    "Instagram": "إنستغرام",
+    "Linkedin": "لينكدان",
+    "Youtube": "يوتيوب",
+    "Manage General Settings": "إدارة  الإعدادات العامة"
     
 }
