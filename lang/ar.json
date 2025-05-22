@@ -22,6 +22,11 @@
     "Instagram": "إنستغرام",
     "Linkedin": "لينكدان",
     "Youtube": "يوتيوب",
-    "Manage General Settings": "إدارة  الإعدادات العامة"
+    "Manage General Settings": "إدارة  الإعدادات العامة",
+    "Arabic Name": "الاسم باللغة العربية",
+    "English Name": "الاسم باللغة الانجليزية",
+    "Phone": "الهاتف",
+    "Arabic Logo": "الشعار  بالعربية",
+    "English Logo": "الشعار  بالانجليزية"
     
 }

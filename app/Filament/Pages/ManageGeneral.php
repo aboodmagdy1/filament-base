@@ -22,25 +22,31 @@ class ManageGeneral extends SettingsPage
                 Forms\Components\Section::make(__('General Settings'))
                     ->schema([
                         Forms\Components\TextInput::make('name_ar')
-                            ->label('Name (Arabic)')
+                            ->label('Arabic Name')
+                            ->translateLabel()
                             ->required(),
                         Forms\Components\TextInput::make('name_en')
-                            ->label('Name (English)')
+                            ->label('English Name')
+                            ->translateLabel()
                             ->required(),
                         Forms\Components\TextInput::make('email')
                             ->label('Email')
+                            ->translateLabel()
                             ->email()
                             ->required(),
                         Forms\Components\TextInput::make('phone')
                             ->label('Phone')
+                            ->translateLabel()
                             ->required(),
                         Forms\Components\FileUpload::make('logo_ar')
-                            ->label('Logo (Arabic)')
+                            ->label('Arabic Logo')
+                            ->translateLabel()
                             ->required()
                             ->default(asset('frontend/images/logo.jpg'))
                             ->image(),
                         Forms\Components\FileUpload::make('logo_en')
-                            ->label('Logo (English)')
+                            ->label('English Logo')
+                            ->translateLabel()
                             ->required()
                             ->default(asset('/frontend/images/logo.jpg'))
                             ->image(),

@@ -9,7 +9,7 @@ use Filament\Pages\SettingsPage;
 
 class ManageSocialMedia extends SettingsPage
 {
-    protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
+    protected static ?string $navigationIcon = 'heroicon-o-share';
 
     protected static string $settings = SocialMediaSettings::class;
     protected static ?string $navigationGroup = 'Settings';
