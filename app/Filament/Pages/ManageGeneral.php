@@ -19,7 +19,7 @@ class ManageGeneral extends SettingsPage
     {
         return $form
             ->schema([
-                Forms\Components\Section::make(__('General Settings'))
+                Forms\Components\Grid::make()
                     ->schema([
                         Forms\Components\TextInput::make('name_ar')
                             ->label('Arabic Name')
@@ -38,18 +38,37 @@ class ManageGeneral extends SettingsPage
                             ->label('Phone')
                             ->translateLabel()
                             ->required(),
-                        Forms\Components\FileUpload::make('logo_ar')
+                            Forms\Components\FileUpload::make('logo_ar')
                             ->label('Arabic Logo')
                             ->translateLabel()
-                            ->required()
-                            ->default(asset('frontend/images/logo.jpg'))
-                            ->image(),
+                            ->image()
+                            ->disk('public')
+                            ->directory('logos')
+                            ->visibility('public')
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('16:9')
+                            ->imageResizeTargetWidth(400)
+                            ->imageResizeTargetHeight(300)
+                            ->maxSize(5120)
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp'])
+                            ->downloadable()
+                            ->previewable(),
+                        
                         Forms\Components\FileUpload::make('logo_en')
                             ->label('English Logo')
                             ->translateLabel()
-                            ->required()
-                            ->default(asset('/frontend/images/logo.jpg'))
-                            ->image(),
+                            ->image()
+                            ->disk('public')
+                            ->directory('logos')
+                            ->visibility('public')
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('16:9')
+                            ->imageResizeTargetWidth(400)
+                            ->imageResizeTargetHeight(300)
+                            ->maxSize(5120)
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp'])
+                            ->downloadable()
+                            ->previewable(),
                       
                             
                     ]),
