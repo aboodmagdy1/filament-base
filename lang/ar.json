@@ -38,7 +38,7 @@
     "View Service": "عرض الخدمة",
     "Service": "الخدمة",
     "Main Core": "المنصة الرئيسية",
-    "Categories": "التصنيفات",
+    "Categories": "التصنيفات",  
     "Categories List": "قائمة التصنيفات",
     "Edit Category": "تعديل التصنيف",
     "Delete Category": "حذف التصنيف",
@@ -58,7 +58,17 @@
     "Active": "مُفعل",
     "Inactive": "غير مُفعل",
     "Status": "الحالة",
-    "Create Home Section": "إنشاء قسم رئيسي"
-    
+    "Create Home Section": "إنشاء قسم رئيسي",
+    "Personal Information": "المعلومات الشخصية",
+    "Acessability": "الوصول",
+    "Account Statistics": "الإحصائيات الحسابية",
+    "Access & Permissions": "الوصول والصلاحيات",
+    "Member Since": "تاريخ الانضمام ",
+    "Email Verification": "التحقق من البريد الإلكتروني",
+    "Verified": "تم التحقق من البريد الإلكتروني",
+    "Not Verified": "لم يتم التحقق من البريد الإلكتروني" ,
+    "Last Updated": "آخر تحديث",
+    "User ID": "رقم المستخدم",
+    "Total Roles": "إجمالي الأدوار"
     
 }
