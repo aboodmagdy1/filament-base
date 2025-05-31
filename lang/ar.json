@@ -69,6 +69,12 @@
     "Not Verified": "لم يتم التحقق من البريد الإلكتروني" ,
     "Last Updated": "آخر تحديث",
     "User ID": "رقم المستخدم",
-    "Total Roles": "إجمالي الأدوار"
+    "Total Roles": "إجمالي الأدوار",
+    "Total Users": "إجمالي المستخدمين",
+    "Dashboard Users": "مُستخدمي لوحة التحكم",
+    "Dashboard Roles": "أدوار لوحة التحكم",
+    "Dashboard Permissions": "صلاحيات لوحة التحكم",
+    "Total Permissions": "إجمالي الصلاحيات"
+    
     
 }

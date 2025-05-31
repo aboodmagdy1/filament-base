@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
+use App\Filament\Resources\UserResource\Widgets\UserStatsWidget;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -107,6 +108,7 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
+            
             'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
             'view' => Pages\ViewUser::route('/{record}'),
@@ -222,6 +224,13 @@ class UserResource extends Resource
                             ]),
                     ]),
             ]);
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            UserStatsWidget::class,
+        ];
     }
 
 
