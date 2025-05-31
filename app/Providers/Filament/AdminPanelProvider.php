@@ -19,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
+use Filament\SpatieLaravelTranslatablePlugin;
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -60,6 +61,7 @@ class AdminPanelProvider extends PanelProvider
                 BreezyCore::make()->myProfile(
                    slug: 'my-profile',hasAvatars: true,)->enableBrowserSessions(true),
                 FilamentShieldPlugin::make(),
+                SpatieLaravelTranslatablePlugin::make()->defaultLocales(['ar', 'en']),
             ])
             ->navigationGroups([
                 NavigationGroup::make()
