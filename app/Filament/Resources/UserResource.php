@@ -27,8 +27,7 @@ class UserResource extends Resource
     
 
     public static function form(Form $form): Form
-    {
-        return $form
+    {        return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
@@ -40,11 +39,14 @@ class UserResource extends Resource
                     ->email()
                     ->required()
                     ->maxLength(255),
+                    //fill with current password if editing
                 Forms\Components\TextInput::make('password')
                     ->password()
                     ->required()
                     ->translateLabel()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->visibleOn('create')
+                    ,
                 Forms\Components\Select::make('roles')
                     ->multiple()
                     ->preload()
