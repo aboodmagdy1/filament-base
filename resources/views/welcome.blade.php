@@ -269,6 +269,9 @@
                 </div>
             </main>
         </div>
+        <div class="text-center text-sm text-gray-500">
+            <p>Total visits: {{ $visits }}</p>
+        </div>
 
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>

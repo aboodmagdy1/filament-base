@@ -6,6 +6,7 @@ use App\Http\Resources\SectionResource;
 use App\Models\HomeSection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redis;
 
 class HomeController extends Controller
 {
@@ -18,8 +19,10 @@ class HomeController extends Controller
             ->ordered()
             ->get();
         $sections = SectionResource::collection($sections)->toArray(request());
-        dd($sections);
-        return view('home.index', compact('sections'));
+        $visits = Redis::incr('home_page_visits');
+        return view('welcome', compact('sections', 'visits'));
     }
+
+
 
 }
