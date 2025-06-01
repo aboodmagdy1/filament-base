@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
 use BezhanSalleh\FilamentShield\FilamentShield;
 use BezhanSalleh\FilamentShield\Commands;
-
+use Filament\Notifications\Livewire\DatabaseNotifications;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -32,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
         Commands\GenerateCommand::prohibit($this->app->isProduction());
         Commands\PublishCommand::prohibit($this->app->isProduction());
         FilamentShield::prohibitDestructiveCommands($this->app->isProduction());
+        DatabaseNotifications::trigger('vendor.filament.notifications.database-notifications-trigger');
     }
 }

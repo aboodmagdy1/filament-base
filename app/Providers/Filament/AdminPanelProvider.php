@@ -67,7 +67,7 @@ class AdminPanelProvider extends PanelProvider
                 NavigationGroup::make()
                     ->label('Users')
                     ->collapsed()
-            ])
+            ])->databaseNotifications()
             ;
     }
 }
