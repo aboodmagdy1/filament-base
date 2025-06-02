@@ -69,7 +69,11 @@ class AdminPanelProvider extends PanelProvider
                     ->label('Users')
                     ->collapsed()
             ])->databaseNotifications()
-            ;
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->brandName('EL-MAGD')
+            ->brandLogo(asset('frontend/images/Elmagd-logo1.jpg'))
+            ->brandLogoHeight('4rem')
+            ->favicon(asset('frontend/images/Elmagd-logo2.jpg'));
     }
 }
 
